@@ -105,28 +105,38 @@ h2 {
   border: 1px solid #444444;
   border-radius: 5px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .projects .card-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .projects .card-title {
   font-family: "Courier New", monospace;
   font-size: 1.2rem;
   color: #4b99f7;
+  margin-bottom: 10px;
 }
 
 .projects .card-text {
   font-family: "Courier New", monospace;
   font-size: 1rem;
   color: #dcdcdc;
+  flex-grow: 1;
 }
 
 .projects .btn-primary {
   background-color: #4b99f7;
   color: white;
   border: none;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .projects .btn-primary:hover {
@@ -191,31 +201,6 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
   color: #357bd8;
-}
-
-/* Syntax Highlighting for Code Sections (Optional) */
-.code-snippet {
-  background-color: #2d2d2d;
-  padding: 20px;
-  border-radius: 5px;
-  font-family: "Courier New", monospace;
-  color: #dcdcdc;
-  border: 1px solid #444444;
-  margin-bottom: 20px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.code-snippet .keyword {
-  color: #ff79c6; /* Pink color for keywords */
-}
-
-.code-snippet .string {
-  color: #50fa7b; /* Green for strings */
-}
-
-.code-snippet .comment {
-  color: #6272a4; /* Blue-grey for comments */
 }
 
 /* Responsive Design */
