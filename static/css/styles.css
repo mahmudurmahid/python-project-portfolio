@@ -139,6 +139,11 @@ h2 {
   align-self: flex-start;
 }
 
+.projects .card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
 .projects .btn-primary:hover {
   background-color: #357bd8;
 }
