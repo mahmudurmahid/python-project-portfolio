@@ -134,6 +134,7 @@ h2 {
 .projects .btn-primary {
   background-color: #4b99f7;
   color: white;
+  font-family: "Courier New", monospace;
   border: none;
   margin-top: auto;
   align-self: flex-start;
