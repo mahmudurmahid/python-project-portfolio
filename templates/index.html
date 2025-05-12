@@ -101,76 +101,73 @@
 
       <!-- Projects Section -->
       <section class="projects" id="projects">
-        <div class="container">
+        <div class="card-container">
           <h2>My Projects</h2>
           <div class="row">
-            <!-- Project 1 Card -->
+            {% for project in projects %}
+            <!-- Project Card -->
             <div class="col-md-4 mb-4">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">🎬 Movie Recommendation System</h5>
-                  <p class="card-text">
-                    A comprehensive movie recommendation system leveraging
-                    various filtering techniques to provide personalized movie
-                    suggestions.
-                  </p>
+                  <h5 class="card-title">{{ project['Title'] }}</h5>
+                  <p class="card-text">{{ project['Description'] }}</p>
                   <a
                     href="#"
-                    class="btn btn-primary btn-show-more"
-                    data-bs-target="#movieModal1"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-{{ loop.index }}"
                     >Show More</a
                   >
                 </div>
               </div>
             </div>
-            <!-- Project 1 Modal -->
+            <!-- Project Modal -->
             <div
               class="modal fade"
-              id="movieModal1"
+              id="modal-{{ loop.index }}"
               tabindex="-1"
-              aria-labelledby="movieModalLabel1"
               aria-hidden="true"
             >
-              <div class="modal-dialog">
-                <div class="modal-content">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-3">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="movieModalLabel1">
-                      🎬 Movie Recommendation System
-                    </h5>
+                    <h5 class="modal-title">{{ project['Title'] }}</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <strong>Description:</strong> {{ project['Description'] }}
+                    </p>
+                    <p>
+                      <strong>GitHub:</strong>
+                      <a href="{{ project['GitHub Link'] }}" target="_blank"
+                        >Repo Link</a
+                      >
+                    </p>
+                    <p>
+                      <strong>Project Type:</strong> {{ project['Project Type']
+                      }}
+                    </p>
+                    <p>
+                      <strong>Frontend Languages:</strong> {{ project['Frontend
+                      Languages'] }}
+                    </p>
+                    <p>
+                      <strong>Backend Languages:</strong> {{ project['Backend
+                      Languages'] }}
+                    </p>
+                    <p>
+                      <strong>Frameworks:</strong> {{ project['Frameworks'] }}
+                    </p>
+                    <p>
+                      <strong>Libraries:</strong> {{ project['Libraries'] }}
+                    </p>
+                    <p><strong>Database:</strong> {{ project['Database'] }}</p>
+                    <p><strong>Status:</strong> {{ project['Status'] }}</p>
                     <button
                       type="button"
                       class="btn-close"
                       data-bs-dismiss="modal"
                       aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <strong>Description:</strong> A comprehensive movie
-                      recommendation system leveraging various filtering
-                      techniques to provide personalized movie suggestions.
-                    </p>
-                    <p>
-                      <strong>GitHub Repo:</strong>
-                      <a
-                        href="https://github.com/mahmudurmahid/movie-recommendation-system"
-                        target="_blank"
-                        >movie-recommendation-system</a
-                      >
-                    </p>
-                    <p><strong>Project Status:</strong> in development</p>
-                    <p><strong>Frameworks Used:</strong> django</p>
-                    <p>
-                      <strong>Libraries Used:</strong> pandas, numpy,
-                      scikit-learn, matplotlib, seaborn, surprise
-                    </p>
-                    <p><strong>Database Used:</strong></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
                     >
                       Close
                     </button>
@@ -178,163 +175,7 @@
                 </div>
               </div>
             </div>
-
-            <!-- Project 2 Card -->
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    📄 PDF Invoice Generator – Python Package
-                  </h5>
-                  <p class="card-text">
-                    A lightweight Python package designed to automate the
-                    conversion of Excel-based invoices into professionally
-                    formatted PDF documents. Ideal for businesses seeking to
-                    streamline their invoicing processes.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary btn-show-more"
-                    data-bs-target="#pythonPackageModal"
-                    >Show More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- Project 2 Modal -->
-            <div
-              class="modal fade"
-              id="pythonPackageModal"
-              tabindex="-1"
-              aria-labelledby="pythonPackageModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="pythonPackageModalLabel">
-                      📄 PDF Invoice Generator – Python Package
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <strong>Description:</strong> A lightweight Python package
-                      designed to automate the conversion of Excel-based
-                      invoices into professionally formatted PDF documents.
-                      Ideal for businesses seeking to streamline their invoicing
-                      processes.
-                    </p>
-                    <p>
-                      <strong>GitHub Repo:</strong>
-                      <a
-                        href="https://github.com/mahmudurmahid/pdf-invoice-python-package"
-                        target="_blank"
-                        >pdf-invoice-python-package</a
-                      >
-                    </p>
-                    <p><strong>Project Status:</strong> complete</p>
-                    <p><strong>Frameworks Used:</strong></p>
-                    <p>
-                      <strong>Libraries Used:</strong> pandas, openxyl, fpdf
-                    </p>
-                    <p><strong>Database Used:</strong></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3 Card -->
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    🍽️ Django Food Order Management Web App
-                  </h5>
-                  <p class="card-text">
-                    A streamlined and responsive web application built with
-                    Django, designed to facilitate online food ordering and
-                    management for restaurants and customers.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary btn-show-more"
-                    data-bs-target="#djangoFoodOrderManagementModal"
-                    >Show More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- Project 3 Modal -->
-            <div
-              class="modal fade"
-              id="djangoFoodOrderManagementModal"
-              tabindex="-1"
-              aria-labelledby="djangoFoodOrderManagementModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5
-                      class="modal-title"
-                      id="djangoFoodOrderManagementModalLabel"
-                    >
-                      🍽️ Django Food Order Management Web App
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <strong>Description:</strong> A streamlined and responsive
-                      web application built with Django, designed to facilitate
-                      online food ordering and management for restaurants and
-                      customers.
-                    </p>
-                    <p>
-                      <strong>GitHub Repo:</strong>
-                      <a
-                        href="https://github.com/mahmudurmahid/django-food-order-management-web-app"
-                        target="_blank"
-                        >django-food-order-management-web-app</a
-                      >
-                    </p>
-                    <p><strong>Project Status:</strong> in development</p>
-                    <p><strong>Frameworks Used:</strong> django</p>
-                    <p><strong>Libraries Used:</strong> pandas</p>
-                    <p><strong>Database Used:</strong> sqlite</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </section>

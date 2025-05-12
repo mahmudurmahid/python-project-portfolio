@@ -7,90 +7,98 @@
 
 /* Body Setup */
 body {
-  background-color: #1e1e1e; /* Dark background like VS Code */
-  color: #dcdcdc; /* Light text color */
+  background-color: #1e1e1e;
+  color: #dcdcdc;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #333333; /* Dark navbar */
-  border-bottom: 1px solid #444444;
+  background-color: #333;
+  border-bottom: 1px solid #444;
   padding: 1rem;
 }
 
-.navbar .navbar-brand {
-  color: #4b99f7; /* Bright blue for branding */
+.navbar .navbar-brand,
+.navbar .nav-link {
   font-family: "Courier New", monospace;
+  color: #dcdcdc;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar .navbar-brand {
+  color: #4b99f7;
 }
 
 .navbar .nav-link {
-  color: #dcdcdc;
-  font-family: "Courier New", monospace;
   padding: 0.5rem 1rem;
 }
 
 .navbar .nav-link:hover {
-  background-color: #444444; /* Dark hover effect */
-  color: #4b99f7; /* Blue color on hover */
+  background-color: #444;
+  color: #4b99f7;
+  cursor: pointer;
 }
 
 /* Hero Section */
 .hero {
   background-color: #1e1e1e;
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
   font-family: "Courier New", monospace;
-  color: #dcdcdc;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #4b99f7; /* Blue title like code editor highlight */
+  color: #4b99f7;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-top: 20px;
+  color: #dcdcdc;
 }
 
 .hero .btn-primary {
   background-color: #4b99f7;
-  border: none;
+  color: #fff;
   font-weight: bold;
-  padding: 10px 20px;
   font-family: "Courier New", monospace;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hero .btn-primary:hover {
   background-color: #357bd8;
 }
 
-/* Code Editor Feel for Sections */
+/* Section Styling */
 section {
-  padding: 40px 0;
-  border-top: 1px solid #444444;
+  padding: 40px 20px;
+  border-top: 1px solid #444;
 }
 
 h2 {
   font-family: "Courier New", monospace;
   font-size: 2rem;
   color: #4b99f7;
-  border-bottom: 2px solid #444444;
+  border-bottom: 2px solid #444;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
 /* About Section */
 .about {
-  background-color: #252526; /* Slightly darker for contrast */
+  background-color: #252526;
 }
 
 .about p {
   font-size: 1rem;
-  color: #dcdcdc;
   line-height: 1.8;
   font-family: "Courier New", monospace;
 }
@@ -101,20 +109,25 @@ h2 {
 }
 
 .projects .card {
-  background-color: #333333; /* Dark cards like a code editor pane */
-  border: 1px solid #444444;
+  background-color: #333;
+  border: 1px solid #444;
   border-radius: 5px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
   height: 100%;
+}
+
+.projects .card:hover {
+  transform: scale(1.05);
 }
 
 .projects .card-body {
   padding: 20px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .projects .card-title {
@@ -133,16 +146,14 @@ h2 {
 
 .projects .btn-primary {
   background-color: #4b99f7;
-  color: white;
+  color: #fff;
   font-family: "Courier New", monospace;
   border: none;
   margin-top: auto;
   align-self: flex-start;
-}
-
-.projects .card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .projects .btn-primary:hover {
@@ -151,22 +162,24 @@ h2 {
 
 /* Project Modal */
 .modal-content {
-  background-color: #2d2d2d; /* Slightly lighter than body for contrast */
-  color: #dcdcdc; /* Light text */
+  background-color: #2d2d2d;
+  color: #dcdcdc;
   border-radius: 12px;
-  border: 1px solid #444; /* Subtle border */
+  border: 1px solid #444;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.modal-header {
-  border-bottom: 1px solid #444;
+.modal-header,
+.modal-body,
+.modal-footer {
   background-color: #2d2d2d;
+  border-color: #444;
 }
 
 .modal-header .modal-title {
   font-weight: bold;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #fff;
 }
 
 .modal-header .btn-close {
@@ -176,13 +189,7 @@ h2 {
 .modal-body {
   font-size: 0.95rem;
   line-height: 1.6;
-  background-color: #2d2d2d;
   padding: 1.25rem;
-}
-
-.modal-footer {
-  border-top: 1px solid #444;
-  background-color: #2d2d2d;
 }
 
 .modal-footer .btn,
@@ -190,7 +197,9 @@ h2 {
   background-color: #007bff;
   border: none;
   color: #fff;
-  transition: background-color 0.2s ease-in-out;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .modal-footer .btn:hover,
@@ -201,7 +210,7 @@ h2 {
 /* Contact Section */
 .contact {
   background-color: #252526;
-  padding: 60px 0;
+  padding: 60px 20px;
 }
 
 .contact h2 {
@@ -209,19 +218,22 @@ h2 {
   font-size: 2rem;
   color: #4b99f7;
   margin-bottom: 40px;
-  border-bottom: 2px solid #444444;
+  border-bottom: 2px solid #444;
 }
 
 .contact .form-control {
-  background-color: #333333;
-  border: 1px solid #444444;
+  background-color: #333;
+  border: 1px solid #444;
   color: #dcdcdc;
   font-family: "Courier New", monospace;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .contact .form-control:focus {
   border-color: #4b99f7;
   box-shadow: 0 0 5px #4b99f7;
+  outline: none;
 }
 
 .contact .form-control::placeholder {
@@ -231,9 +243,12 @@ h2 {
 
 .contact button {
   background-color: #4b99f7;
-  color: white;
+  color: #fff;
   font-family: "Courier New", monospace;
   border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
@@ -243,9 +258,9 @@ h2 {
 /* Footer */
 footer {
   background-color: #1e1e1e;
-  padding: 20px 0;
-  color: #dcdcdc;
+  padding: 20px;
   text-align: center;
+  color: #dcdcdc;
   font-family: "Courier New", monospace;
 }
 
@@ -257,6 +272,7 @@ footer .social-icons a {
   color: #4b99f7;
   margin: 0 10px;
   font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
