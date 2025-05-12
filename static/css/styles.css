@@ -149,6 +149,55 @@ h2 {
   background-color: #357bd8;
 }
 
+/* Project Modal */
+.modal-content {
+  background-color: #2d2d2d; /* Slightly lighter than body for contrast */
+  color: #dcdcdc; /* Light text */
+  border-radius: 12px;
+  border: 1px solid #444; /* Subtle border */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+  border-bottom: 1px solid #444;
+  background-color: #2d2d2d;
+}
+
+.modal-header .modal-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background-color: #2d2d2d;
+  padding: 1.25rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #444;
+  background-color: #2d2d2d;
+}
+
+.modal-footer .btn,
+.modal-body .btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.modal-footer .btn:hover,
+.modal-body .btn:hover {
+  background-color: #0056b3;
+}
+
 /* Contact Section */
 .contact {
   background-color: #252526;
