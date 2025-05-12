@@ -144,7 +144,8 @@ h2 {
   flex-grow: 1;
 }
 
-.projects .btn-primary {
+.projects .btn-primary,
+.projects .btn-modal {
   background-color: #4b99f7;
   color: #fff;
   font-family: "Courier New", monospace;
@@ -156,7 +157,8 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-.projects .btn-primary:hover {
+.projects .btn-primary:hover,
+.projects .btn-modal:hover {
   background-color: #357bd8;
 }
 

@@ -138,15 +138,10 @@
                       <strong>Description:</strong> {{ project['Description'] }}
                     </p>
                     <p>
-                      <strong>GitHub:</strong>
-                      <a href="{{ project['GitHub Link'] }}" target="_blank"
-                        >Repo Link</a
-                      >
-                    </p>
-                    <p>
                       <strong>Project Type:</strong> {{ project['Project Type']
                       }}
                     </p>
+                    <p><strong>Status:</strong> {{ project['Status'] }}</p>
                     <p>
                       <strong>Frontend Languages:</strong> {{ project['Frontend
                       Languages'] }}
@@ -162,10 +157,16 @@
                       <strong>Libraries:</strong> {{ project['Libraries'] }}
                     </p>
                     <p><strong>Database:</strong> {{ project['Database'] }}</p>
-                    <p><strong>Status:</strong> {{ project['Status'] }}</p>
+                    <a
+                      href="{{ project['GitHub Link'] }}"
+                      target="_blank"
+                      class="btn btn-modal mt-3 me-2"
+                    >
+                      Go To GitHub Repo
+                    </a>
                     <button
                       type="button"
-                      class="btn-close"
+                      class="btn btn-modal mt-3"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     >
