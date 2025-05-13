@@ -209,54 +209,6 @@ h2 {
   background-color: #0056b3;
 }
 
-/* Contact Section */
-.contact {
-  background-color: #252526;
-  padding: 60px 20px;
-}
-
-.contact h2 {
-  font-family: "Courier New", monospace;
-  font-size: 2rem;
-  color: #4b99f7;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #444;
-}
-
-.contact .form-control {
-  background-color: #333;
-  border: 1px solid #444;
-  color: #dcdcdc;
-  font-family: "Courier New", monospace;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-.contact .form-control:focus {
-  border-color: #4b99f7;
-  box-shadow: 0 0 5px #4b99f7;
-  outline: none;
-}
-
-.contact .form-control::placeholder {
-  color: #dcdcdc;
-  opacity: 0.7;
-}
-
-.contact button {
-  background-color: #4b99f7;
-  color: #fff;
-  font-family: "Courier New", monospace;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact button:hover {
-  background-color: #357bd8;
-}
-
 /* Footer */
 footer {
   background-color: #1e1e1e;
