@@ -1,3 +1,4 @@
+<script>
 document.querySelectorAll(".btn-show-more").forEach(function (button) {
   button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevents page from jumping to the top
@@ -6,3 +7,4 @@ document.querySelectorAll(".btn-show-more").forEach(function (button) {
     myModal.show();
   });
 });
+</script>
